@@ -1,0 +1,56 @@
+------- Activities in hand 
+1. VAT Reco - Sanjana
+2. PRTF diff - Alex
+3. Signature project - List changes & provide UAT
+4. SWS - Work reports (around 12 reports)
+5. SWS - Incentive program 
+6. Update all CR's on Servicenow
+7. PP - Data PP Tab - New form to capture the PP details on Customer form - Fawas brand 
+
+
+------- Activities in hand 
+
+1. Doxa & Ecom - done
+2. SWS - Incentive & Reports (Around 12) - pending
+3. Signature project (CRM) - WIP -- additional columns - CRM Module 
+4. Master data changes (Faris) - wip
+5. Eplain hari about Audit app - aml - done
+6. triiger on sims_Sap_fin_v_t - done
+7. JCR42 differences- WIP - Alex to check  -- WIP
+8. Demo to Praveen on EDIT offline sales - CRM - Done - SFTP File transfer - changes
+
+------
+
+9. Change all the sws ticket to CR & schedule
+10. Start work on Incentive project once pont#3 is finished
+11. Saleforce - wip -data extraction 
+12. Trigger on Customer table for Preferred Name - Done
+13. Muleforce Trigger - Orders - WIP
+13. PP - Data PP Tab - New form to capture the PP details on Customer form
+
+---
+
+20-aug-204 - testing / 01-sep -implement
+
+ICP: 0102185946082024482821696
+
+https://idnf.infodynamic.net/ESS
+
+CHG0030491 - rania /rafeeck
+
+REQ0011383
+
+
+
+sales guaranty
+free of service
+stock repair
+godd will
+
+
+function BeforePForm return boolean is
+begin
+select to_char(TRUNC (SYSDATE, 'YEAR'),'DD-MON-RRRR') , to_char(ADD_MONTHS(trunc(sysdate,'YEAR'),12)-1,'DD-MON-RRRR')   
+into :from_dt, :to_dt from dual;
+return (TRUE);
+end;
